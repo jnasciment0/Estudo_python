@@ -1,0 +1,5 @@
+nomes = ('Jasson', 'Carol', 'Luiz', 'Wesley')
+print("Olá "+ nomes[0]+", Seja Bem vindo!")
+print("Olá "+ nomes[1]+", Seja Bem vindo!")
+print("Olá "+ nomes[2]+", Seja Bem vindo!")
+print("Olá "+ nomes[3]+", Seja Bem vindo!")

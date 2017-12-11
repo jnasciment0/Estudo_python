@@ -1,0 +1,5 @@
+carros = ('Honda', 'Gol', 'Voyage', 'Fusca')
+print('Gostaria de ter muito um ' + carros[0])
+print('Eu vou comprar um' + carros[1] + ' no final do ano')
+print('O meu pai tem um ' + carros[2])
+print('Meu vizinho tem '+carros[3])
