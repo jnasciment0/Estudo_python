@@ -13,10 +13,7 @@ def make_great(magicos_nomes,nomes_novos):
 		nomes_novos.append('O grande ' + recebe_nome)
 	
 	for nomes_novo in nomes_novos:
-		print("Lista alterada : "+ nomes_novo)
-
-	for magicos_nome in magicos_nomes:
-		print("Lista original \n" + magicos_nomes)
+		print("Apresento : "+ nomes_novo)
 
 show_magiccians(magicos_nomes)
-make_great(magicos_nomes[:],nomes_novos)
+make_great(magicos_nomes,nomes_novos)
