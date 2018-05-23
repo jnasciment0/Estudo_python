@@ -7,7 +7,7 @@ class User():
     self.nick_name = nick_name;
 
   def describe_user(self):
-    print("######## - Dados do Usuário - ########");
+    print("\n######## - Dados do Usuário - ########");
     print("Primeiro nome: " + self.first_name.title());
     print("Ultimo nome: " + self.last_name.title());
     print("Idade do jogador:  " + str(self.year));
@@ -17,4 +17,6 @@ class User():
     print("Seja muito bem vindo jogar " + self.nick_name);
     print("O jogo ira começar em algum segundos!");
 
-usuarios = User("jasson", "nascimento", 28, "chefao);
+usuarios = User("jasson", "nascimento", 28, "chefao");
+usuarios.greet_user();
+usuarios.describe_user();
