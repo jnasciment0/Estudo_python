@@ -1,33 +1,9 @@
-class Car():
-  """Uma Tentativa simples de representar um carro"""
-
-  def __init__(self, make, model, year):
-    self.make = make
-    self.model = model
-    self.year = year
-    self.odometer_reading = 0
-
-  def get_descriptive_name(self):
-    
-    long_name = str(self.year) + ' ' + self.make + ' ' + self.model
-    return long_name.title();
-
-  def read_odometer(self):
-    print("This car has " + str(self.odometer_reading) + " miles on it.")
-
-  def update_odometer(self, mileage):
-    
-    if mileage >= self.odometer_reading:
-      self.odometer_reading = mileage
-    else:
-      print("You can't roll back an odometer!")
-
-  def  increment_odometer(self, miles):
-    self.odometer_reading += miles
+"""Um conjunto de classes que pode ser usado para representar carros Eletricos"""
+from car import Car
 
 class Battery():
   """uma tentativa simples de modela uma bateria para um carro eletrico"""
-  def __init__(self, battery_size = 85):
+  def __init__(self, battery_size = 60):
     """Inicialza os atributos da baterias"""
     self.battery_size = battery_size
 
@@ -37,15 +13,13 @@ class Battery():
 
   def get_range(self):
     """Exebi uma frase sobre a distancia que o carro é capaz de percorre com essa bateria"""
+    range = 0
     if self.battery_size == 70:
       range = 240
     elif self.battery_size == 85:
       range = 270
-    message = "This car can go approximately " + str(range)
-    message += " miles on a full charge."
-    print(message)
-
-class ElectriCar(Car):
+  
+class ElectricCar(Car):
   """Representa aspectos de um carro especificos de veiculos eletricos"""
   def __init__(self, make, model,year):
     """
@@ -58,9 +32,3 @@ class ElectriCar(Car):
   def fill_gas_tank():
     """Carros eletricos não tem tanques de gasolina"""
     print("This car doesn't nees a gas tank!")
-
-my_tesla = ElectriCar('tesla', 'model s', 2016)
-
-print(my_tesla.get_descriptive_name())
-my_tesla.battery.describe_battery()
-my_tesla.battery.get_range()
